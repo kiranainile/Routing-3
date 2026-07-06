@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
 
 import { AppComponent } from './app.component';
 
@@ -18,9 +20,12 @@ import { GetConfirmationComponent } from './shared/component/get-confirmation/ge
 import { RouterModule } from '@angular/router';
 import { ProductComponent } from './shared/component/products-dashboard/product/product.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatCommonModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { UserFormComponent } from './shared/component/user-dashboard/user-form/user-form.component';
+import { UserDetailsComponent } from './shared/component/user-dashboard/user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,9 @@ import { MatButtonModule } from '@angular/material/button';
     FairsDashboardComponent,
     UserDashboardComponent,
     GetConfirmationComponent,
-    ProductComponent
+    ProductComponent,
+    UserFormComponent,
+    UserDetailsComponent
 
     
   ],
@@ -40,6 +47,7 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+     MatIconModule,
      CommonModule,
      ReactiveFormsModule,
      RouterModule,
@@ -47,6 +55,10 @@ import { MatButtonModule } from '@angular/material/button';
      MatDialogModule,
      MatCommonModule,
      MatButtonModule,
+     MatCardModule,
+     MatChipsModule
+     
+  
      
    
      

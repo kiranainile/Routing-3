@@ -5,6 +5,8 @@ import { UserDashboardComponent } from "./shared/component/user-dashboard/user-d
 import { ProductsDashboardComponent } from "./shared/component/products-dashboard/products-dashboard.component";
 import { FairsDashboardComponent } from "./shared/component/fairs-dashboard/fairs-dashboard.component";
 import { ProductFormComponent } from "./shared/component/products-dashboard/product-form/product-form.component";
+import { UserFormComponent } from "./shared/component/user-dashboard/user-form/user-form.component";
+import { UserDetailsComponent } from "./shared/component/user-dashboard/user-details/user-details.component";
 
 
 
@@ -22,7 +24,25 @@ const routes: Routes= [
    
      {
         path:'users',
-        component:UserDashboardComponent
+        component:UserDashboardComponent,
+        children:[{
+             
+        path:'addUser',
+        component:UserFormComponent
+    },
+     {
+        path:':userId',
+        component:UserDetailsComponent
+    },
+     {
+        path:':userId/edit',    ///edit mode mai hoga
+        component:UserFormComponent
+    },
+
+        
+
+
+        ]
     },
   {
         path:'products',

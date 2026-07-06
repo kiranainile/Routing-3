@@ -14,7 +14,7 @@ export class ProductService{
 
     productsArr :Array <Iproduct>=[
         {
-            pname:'Samsung M31',
+            pname:'Virat Kolhi',
             pid:'123',
           pstatus:'In-progress',
 
@@ -22,7 +22,7 @@ export class ProductService{
 
         },
          {
-            pname:'Iphone M31',
+            pname:'Sachin Tendulakr',
             pid:'124',
            pstatus:'Dispatched',
 
@@ -30,17 +30,31 @@ export class ProductService{
 
         },
          {
-            pname:'samsun tv',
+            pname:'Rohit Sharma',
             pid:'125',
             pstatus:'Delivered',
             canReturn:0
 
         },
          {
-            pname:'Iphone 15',
+            pname:'Hardik Pandey',
             pid:'126',
           pstatus:'In-progress',
 
+            canReturn:0
+
+        },
+        {
+            pname:'Kunal Pandey',
+            pid:'127',
+            pstatus:'Delivered',
+            canReturn:1
+
+        },
+        {
+              pname:'Jasprit Brumrah',
+            pid:'128',
+            pstatus:'Delivered',
             canReturn:0
 
         },
