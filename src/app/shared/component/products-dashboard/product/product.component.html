@@ -1,0 +1,23 @@
+
+<div class="container">
+<div class="card" *ngIf="productobj">
+    <div 
+    class="card-body">
+        <p>
+            The Product is {{productobj.pname}} and its status is<strong> {{productobj.pstatus}}</strong>
+        </p>
+    </div>
+    <div class="card-footer">
+        <button 
+        [routerLink]="['/products', productId, 'edit']">
+        
+        class="me-3"
+        mat-raised-button
+        color="primary">Edit</button>
+
+         <button
+         (click)="onRemove()"
+          class="me-3" mat-raised-button color="warn">Remove</button>
+    </div>
+    </div>
+</div>
