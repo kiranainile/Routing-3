@@ -34,13 +34,14 @@ export class ProductFormComponent implements OnInit {
     this.patchProductForm()
      this._route.queryParams
     .subscribe(res=>{
-      if(res['cr']==0){
-        this.productForm.disable()
-        this.disableUpdateBtn=true
-      }else{
-        this.productForm.enable()
-        this.disableUpdateBtn=false
-      }
+      // if(res['cr']==0){
+      //   this.productForm.disable()
+      //   this.disableUpdateBtn=true
+      // }else{
+      //   this.productForm.enable()
+      //   this.disableUpdateBtn=false
+      // }()
+      this.productForm.enable()
 
     })
     
@@ -50,7 +51,7 @@ export class ProductFormComponent implements OnInit {
 
 patchProductForm(){
 
-this.productID=this._route.snapshot.paramMap.get('productId')!
+this.productID=this._route.snapshot.paramMap.get('pid')!
     if(this.productID){
       this.isInEditMode=true
       this._productService.fetchProductById(this.productID)

@@ -4,23 +4,33 @@ import { HomeDashboardComponent } from "./shared/component/home-dashboard/home-d
 import { UserDashboardComponent } from "./shared/component/user-dashboard/user-dashboard.component";
 import { ProductsDashboardComponent } from "./shared/component/products-dashboard/products-dashboard.component";
 import { FairsDashboardComponent } from "./shared/component/fairs-dashboard/fairs-dashboard.component";
+import { ProductComponent } from "./shared/component/products-dashboard/product/product.component";
 import { ProductFormComponent } from "./shared/component/products-dashboard/product-form/product-form.component";
 import { UserFormComponent } from "./shared/component/user-dashboard/user-form/user-form.component";
 import { UserDetailsComponent } from "./shared/component/user-dashboard/user-details/user-details.component";
+import { PageNotFoundComponent } from "./shared/component/page-not-found/page-not-found.component";
+import { FairDetailsComponent } from "./shared/component/fairs-dashboard/fair-details/fair-details.component";
+import { AuthComponent } from "./shared/component/auth/auth.component";
 
 
 
 //http://localhost:4200 //baseurl
 const routes: Routes= [
     {
-        path:'',//http://localhost:4200
+        path:'',
+        component:AuthComponent
+    },
+
+
+    {
+        path:'home',//http://localhost:4200
         component:HomeDashboardComponent
     },
-    {
-        path:'',
-       redirectTo:'home',
-       pathMatch:'full'
-    },
+    // {
+    //     path:'',
+    //    redirectTo:'home',
+    //    pathMatch:'full'
+    // },
    
      {
         path:'users',
@@ -44,7 +54,8 @@ const routes: Routes= [
 
         ]
     },
-  {
+    
+    {
         path:'products',
         component:ProductsDashboardComponent,
         children:[
@@ -54,7 +65,7 @@ const routes: Routes= [
     },
      {
         path:':productId',
-        component:ProductFormComponent
+        component:ProductComponent
     },
 
      {
@@ -64,11 +75,27 @@ const routes: Routes= [
      
         ]
     },
+    
     {
         path:'fairs',
-        component:FairsDashboardComponent
-    }
+        component:FairsDashboardComponent,
+        children:[
+            {
+                path:':fairId',
+                component:FairDetailsComponent
+            }
+        ]
+    },
 
+{
+    path:'page-not-found',
+    component:PageNotFoundComponent
+
+},
+{
+    path:'**',
+    redirectTo:'page-not-found'
+}
 
     
 ]

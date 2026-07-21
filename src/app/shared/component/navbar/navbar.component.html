@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg navbar-dark custom-nav">
+<a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -11,7 +11,7 @@
       routerLinkActive="active"
         
          class="nav-item">
-        <a class="nav-link" routerLink="/">Home <span class="sr-only"></span></a>
+        <a class="nav-link" routerLink="home">Home <span class="sr-only"></span></a>
       </li>
       <li 
      routerLinkActive="active"
@@ -30,13 +30,14 @@
        class="nav-item">
         <a class="nav-link" routerLink="/fairs">Fairs</a>
       </li>
-      
-      
-      
-        
-      
-     
+    
     </ul>
-   
+   <button
+   (click)="onLogOut()"
+      mat-raised-button
+      color="warn"
+      class="ms-auto me-3">
+      Log out
+   </button>   
   </div>
 </nav>

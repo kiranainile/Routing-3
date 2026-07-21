@@ -43,7 +43,7 @@ userId!:string
       .subscribe({
         next:res=>{
          this.editUser=res;
-         this.userForm.patchValue({...this.editUser})
+         this.userForm.patchValue(this.editUser)
          if(res.userRole === "Indian Cricketer"){
           this.userForm.disable()
          }else{
@@ -87,7 +87,9 @@ patchskills(dataArr:Array<any>,formArr:FormArray){
 
          })
 }
-
+removeSkill(index: number): void {
+  this.skillsArr.removeAt(index);
+}
 
   isAddSameHandler(){
     

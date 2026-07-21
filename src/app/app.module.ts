@@ -26,6 +26,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { UserFormComponent } from './shared/component/user-dashboard/user-form/user-form.component';
 import { UserDetailsComponent } from './shared/component/user-dashboard/user-details/user-details.component';
+import { FairCardComponent } from './shared/component/fairs-dashboard/fair-card/fair-card.component';
+import { FairDetailsComponent } from './shared/component/fairs-dashboard/fair-details/fair-details.component';
+import { AuthComponent } from './shared/component/auth/auth.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PageNotFoundComponent } from './shared/component/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +44,12 @@ import { UserDetailsComponent } from './shared/component/user-dashboard/user-det
     GetConfirmationComponent,
     ProductComponent,
     UserFormComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    FairCardComponent,
+    FairDetailsComponent,
+    AuthComponent,
+    PageNotFoundComponent,
+
 
     
   ],
@@ -56,7 +66,8 @@ import { UserDetailsComponent } from './shared/component/user-dashboard/user-det
      MatCommonModule,
      MatButtonModule,
      MatCardModule,
-     MatChipsModule
+     MatChipsModule,
+     HttpClientModule 
      
   
      

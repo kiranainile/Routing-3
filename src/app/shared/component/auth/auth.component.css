@@ -1,0 +1,24 @@
+.main-auth {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width:25%;
+}
+
+form{
+    .ng-touched.ng-invalid,
+    .ng-dirty.ng-invalid{
+        border: 2px solid red;
+    }
+}

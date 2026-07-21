@@ -13,7 +13,7 @@
         <li 
         [routerLink]="['/users',user.userId]"
         [queryParams]="{userRole:user.userRole}"
-        routerLink="active"
+        routerLinkActive="active"
         class="list-group-item" *ngFor="let user of userArr">
             {{user.userName}}
             <small class="badge"

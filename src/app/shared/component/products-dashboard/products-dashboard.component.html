@@ -2,36 +2,33 @@
   <div class="col-12 text-end">
     <button
       routerLink="/products/addProduct"
-      class="btn btn-primary"
-      style="margin-right: 50px">
+      class="btn btn-primary mb-2"
+      style="margin:20px 20px">
       Add Product
     </button>
   </div>
 
   <div class="col-md-4">
-    <ul
-      style="margin-left: 100px"
-      class="list-group">
+    <ul class="list-group" style="margin-left: 100px">
 
       <li
         *ngFor="let product of products"
-        
-        [routerLink]="['/products', product.pid]"
-         routerLink="active"
-
-        [queryParams]="{cr:product.canReturn}"
-        class="list-group-item">
+        class="list-group-item"
+        [routerLink]="[ product.pid]"
+        [queryParams]="{ cr: product.canReturn }"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }">
 
         {{ product.pname }}
 
-       <small
-        class="badge"
-         [ngClass]="{
-                  'bg-primary': product.pstatus === 'Dispatched',
-                  'bg-success': product.pstatus === 'Delivered',
-                  'bg-warning': product.pstatus === 'In-progress'
-                 }">
-             {{ product.pstatus }}
+        <small
+          class="badge"
+          [ngClass]="{
+            'bg-primary': product.pstatus === 'Dispatched',
+            'bg-success': product.pstatus === 'Delivered',
+            'bg-warning': product.pstatus === 'In-progress'
+          }">
+          {{ product.pstatus }}
         </small>
 
       </li>
